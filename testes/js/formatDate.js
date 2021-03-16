@@ -5,6 +5,11 @@
 
 function formatDate(userDate) {
   // format from M/D/YYYY to YYYYMMDD
+  var novaData = "";
+  novaData = novaData + userDate.substring(6,10);
+  novaData = novaData + userDate.substring(3,5);
+  novaData = novaData + userDate.substring(0,2);
+  return novaData;
 }
 
 console.log(formatDate("12/31/2014"));

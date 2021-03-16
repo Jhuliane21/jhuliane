@@ -19,7 +19,17 @@ class Palindrome
 {
     public static function isPalindrome($word)
     {
-        return NULL;
+        $invertido = "";
+        for (var j=word.length-1; j>=0; j--){
+            invertido.concat(word.charAt(j));
+        }
+        $word = strtolower($word);
+        $invertido = strtolower($invertido);
+        if($word == $invertido){
+            return true;
+        }else{
+            return false;
+        }
     }
 }
 
