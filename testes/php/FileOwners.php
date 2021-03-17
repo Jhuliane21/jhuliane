@@ -15,7 +15,29 @@ class FileOwners
 {
     public static function groupByOwners($files)
     {
-        return NULL;
+        $i = 0;
+        $donos = array();
+        foreach($files as $a){
+            foreach($donos as $b){
+                if($files[$a] == $b){
+                    $i = $i + 1;
+                }
+            }
+            if($i == 0){
+                $donos.push($files[$a]);
+            }
+            $i = 0;
+        }
+        foreach($donos as $d){
+            $pertences = array();
+            foreach($files as $f){
+                if($files[$f] == $d){
+                    $pertences.push($f);
+                }
+            }
+            $donos[$d] = $pertences;
+        }
+        return $donos;
     }
 }
 

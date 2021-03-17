@@ -10,3 +10,5 @@ TABLE cats
 
 
 Escreva uma consulta que selecione todos os nomes de animais distintos.
+
+select c.name, f.name from cats as c, dog as d
