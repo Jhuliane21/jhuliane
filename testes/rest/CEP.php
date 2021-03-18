@@ -41,7 +41,8 @@ class CEP
 {
     public static function getAddressByCep($cep)
     {
-		$enderecos = json_decode(file_get_contents("https://api.postmon.com.br/v1/cep/$cep"));
+		$json = get("https://api.postmon.com.br/v1/cep/$cep");
+		$enderecos = json_decode(file_get_contents($json));
         return $enderecos;
     }
 }

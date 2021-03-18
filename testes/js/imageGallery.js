@@ -28,18 +28,19 @@
 
 
 function setup () {
-  // Write your code here.
+  var div = document.getElementsByTagName("button").closest("div");
+  div.style.display = "none";
 }
 
 // Example case. 
 document.body.innerHTML = `
 <div class="image">
   <img src="https://goo.gl/kjzfbE" alt="First">
-  <button class="remove">X</button>
+  <button class="remove" >X</button>
 </div>
 <div class="image">
   <img src="https://goo.gl/d2JncW" alt="Second">
-  <button class="remove">X</button>
+  <button class="remove" onclick="setup()">X</button>
 </div>`;
 
 setup();
